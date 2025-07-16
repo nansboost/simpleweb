@@ -38,7 +38,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1; /* Pastikan video berada di belakang konten */
+      z-index: -1;
     }
 
     main{
@@ -56,12 +56,11 @@
       background-color: rgba(255, 255, 255, 0.45);
       border-radius: 2rem;
       border: 0.1rem solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(1.5rem);
       min-width:25rem;
       box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
       position: relative;
-      z-index: 1; /* Supaya kontainer di atas video */
+      z-index: 1;
     }
 
     .image {
@@ -112,12 +111,21 @@
       padding: 0.3rem;
       transition: all 200ms ease-in-out;
       box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+      background-color: transparent;
     }
 
     .link-boxes a:hover {
       border: 0.1rem solid #27213b;
       background-color:#f8923b;
       cursor: pointer;
+    }
+
+    /* ✅ Warna berubah jadi Indigo ketika sudah di-klik */
+    .link-boxes a:active,
+    .link-boxes a:focus {
+      background-color: indigo;
+      color: white;
+      border-color: indigo;
     }
 
     .location {
